@@ -31,9 +31,6 @@ class ProductImageCartConnectorBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductImageCartConnector\Business\Expander\ProductImageItemExpanderInterface
-     */
     public function createProductImageItemExpander(): ProductImageItemExpanderInterface
     {
         return new ProductImageItemExpander(
@@ -42,17 +39,11 @@ class ProductImageCartConnectorBusinessFactory extends AbstractBusinessFactory
         );
     }
 
-    /**
-     * @return \Spryker\Zed\ProductImageCartConnector\Dependency\Facade\ProductImageCartConnectorToProductImageFacadeInterface
-     */
     public function getProductImageFacade(): ProductImageCartConnectorToProductImageFacadeInterface
     {
         return $this->getProvidedDependency(ProductImageCartConnectorDependencyProvider::FACADE_PRODUCT_IMAGE);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductImageCartConnector\Dependency\Facade\ProductImageCartConnectorToLocaleFacadeInterface
-     */
     public function getLocaleFacade(): ProductImageCartConnectorToLocaleFacadeInterface
     {
         return $this->getProvidedDependency(ProductImageCartConnectorDependencyProvider::FACADE_LOCALE);

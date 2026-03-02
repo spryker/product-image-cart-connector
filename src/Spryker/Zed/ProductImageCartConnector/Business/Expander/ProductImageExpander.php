@@ -23,9 +23,6 @@ class ProductImageExpander implements ProductImageExpanderInterface
      */
     protected $productImageFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductImageCartConnector\Dependency\Facade\ProductImageCartConnectorToProductImageFacadeInterface $productImageFacade
-     */
     public function __construct(
         ProductImageCartConnectorToProductImageFacadeInterface $productImageFacade
     ) {

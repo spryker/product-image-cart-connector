@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Zed\Business;
+namespace SprykerTest\Zed\ProductImageCartConnector\Business;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\CartChangeTransfer;
@@ -19,6 +19,7 @@ use SprykerTest\Zed\ProductImageCartConnector\ProductImageCartConnectorBusinessT
  *
  * @group SprykerTest
  * @group Zed
+ * @group ProductImageCartConnector
  * @group Business
  * @group Facade
  * @group ProductImageCartConnectorFacadeTest
@@ -40,9 +41,6 @@ class ProductImageCartConnectorFacadeTest extends Unit
      */
     protected ProductImageCartConnectorBusinessTester $tester;
 
-    /**
-     * @return void
-     */
     public function testExpandCartChangeItemsExpandsCartItemWithConcreteProductImages(): void
     {
         // Arrange
@@ -73,9 +71,6 @@ class ProductImageCartConnectorFacadeTest extends Unit
         $this->assertInstanceOf(ProductImageTransfer::class, $imageTransfer);
     }
 
-    /**
-     * @return void
-     */
     public function testExpandCartChangeItemsExpandsCartItemWithAbstractProductImagesIfConcreteProductImagesAreMissing(): void
     {
         // Arrange

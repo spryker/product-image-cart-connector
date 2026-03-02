@@ -29,10 +29,6 @@ class ProductImageItemExpander implements ProductImageItemExpanderInterface
      */
     protected ProductImageCartConnectorToLocaleFacadeInterface $localeFacade;
 
-    /**
-     * @param \Spryker\Zed\ProductImageCartConnector\Dependency\Facade\ProductImageCartConnectorToProductImageFacadeInterface $productImageFacade
-     * @param \Spryker\Zed\ProductImageCartConnector\Dependency\Facade\ProductImageCartConnectorToLocaleFacadeInterface $localeFacade
-     */
     public function __construct(
         ProductImageCartConnectorToProductImageFacadeInterface $productImageFacade,
         ProductImageCartConnectorToLocaleFacadeInterface $localeFacade
@@ -41,11 +37,6 @@ class ProductImageItemExpander implements ProductImageItemExpanderInterface
         $this->localeFacade = $localeFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\CartChangeTransfer $cartChangeTransfer
-     *
-     * @return \Generated\Shared\Transfer\CartChangeTransfer
-     */
     public function expandItems(CartChangeTransfer $cartChangeTransfer): CartChangeTransfer
     {
         $productConcreteIds = $this->extractProductConcreteIds($cartChangeTransfer->getItems());
@@ -100,12 +91,6 @@ class ProductImageItemExpander implements ProductImageItemExpanderInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\ProductImageSetCollectionTransfer $productImageSetCollectionTransfer
-     *
-     * @return void
-     */
     protected function expandItemTransferWithConcreteProductImages(
         ItemTransfer $itemTransfer,
         ProductImageSetCollectionTransfer $productImageSetCollectionTransfer
@@ -117,12 +102,6 @@ class ProductImageItemExpander implements ProductImageItemExpanderInterface
         }
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     * @param \Generated\Shared\Transfer\ProductImageSetCollectionTransfer $productImageSetCollectionTransfer
-     *
-     * @return void
-     */
     protected function expandItemTransferWithAbstractProductImages(
         ItemTransfer $itemTransfer,
         ProductImageSetCollectionTransfer $productImageSetCollectionTransfer

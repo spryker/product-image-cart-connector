@@ -37,9 +37,6 @@ class ProductImageCartPluginTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function setUp(): void
     {
         parent::setUp();
@@ -47,9 +44,6 @@ class ProductImageCartPluginTest extends Unit
         $this->productImageCartConnectorFacade = new ProductImageCartConnectorFacade();
     }
 
-    /**
-     * @return void
-     */
     public function testPluginExpandsCartItemWithImages(): void
     {
         // Arrange

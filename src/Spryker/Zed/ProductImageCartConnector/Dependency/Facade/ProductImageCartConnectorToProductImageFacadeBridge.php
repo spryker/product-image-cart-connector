@@ -38,21 +38,11 @@ class ProductImageCartConnectorToProductImageFacadeBridge implements ProductImag
         return $this->productImageFacade->getProductImagesByProductIdsAndProductImageSetName($productIds, $productImageSetName);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetCriteriaTransfer $productImageSetCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductImageSetCollectionTransfer
-     */
     public function getConcreteProductImageSetCollection(ProductImageSetCriteriaTransfer $productImageSetCriteriaTransfer): ProductImageSetCollectionTransfer
     {
         return $this->productImageFacade->getConcreteProductImageSetCollection($productImageSetCriteriaTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductImageSetCriteriaTransfer $productImageSetCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductImageSetCollectionTransfer
-     */
     public function getAbstractProductImageSetCollection(ProductImageSetCriteriaTransfer $productImageSetCriteriaTransfer): ProductImageSetCollectionTransfer
     {
         return $this->productImageFacade->getAbstractProductImageSetCollection($productImageSetCriteriaTransfer);
