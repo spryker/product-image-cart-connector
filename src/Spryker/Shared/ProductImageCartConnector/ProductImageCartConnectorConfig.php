@@ -10,6 +10,8 @@ namespace Spryker\Shared\ProductImageCartConnector;
 class ProductImageCartConnectorConfig
 {
     /**
+     * @api
+     *
      * @var string
      */
     public const DEFAULT_IMAGE_SET_NAME = 'default';
